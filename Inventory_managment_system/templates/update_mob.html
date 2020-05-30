@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block block_body%}
+
+<
+<form class="" action="" method="post">
+
+   {% csrf_token %}
+  <input type="text" name="brand" value="{{form.brand}}">
+  <input type="text" name="model" value="{{form.model}}">
+  <input type="text" name="price" value="{{form.price}}">
+  <input type="text" name="status" value="{{form.status}}">
+  <input type="text" name="issues" value="{{form.issues}}">
+  <input type="submit" name="" value="Update">
+
+
+
+
+</form>
+{% endblock%}

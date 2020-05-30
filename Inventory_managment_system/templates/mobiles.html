@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% block block_body%}
+
+<br><br>
+<p>these are  available mobiles</p>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">brand</th>
+      <th scope="col">model</th>
+      <th scope="col">price</th>
+      <th scope="col">status</th>
+      <th scope="col">issues</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for mobile in mobiles%}
+  <tr>
+    <td>{{mobile.id}}</td>
+    <td>{{mobile.brand}}</td>
+    <td>{{mobile.model}}</td>
+    <td>{{mobile.price}}</td>
+    <td>{{mobile.status}}</td>
+    <td>{{mobile.issues}}</td>
+
+    <td><a href="http://127.0.0.1:8000/delete_mobile/{{mobile.id}}"  class="material-icons"  value="delete">delete</a>
+
+    <a href="http://127.0.0.1:8000/update_mobile/{{mobile.id}}" class="btn btn-light" value="update">Update</a>
+
+    </td>
+
+
+
+
+
+  </tr>
+  {% endfor%}
+  </tbody>
+</table>
+
+
+
+
+
+{% endblock%}
